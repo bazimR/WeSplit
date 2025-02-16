@@ -55,7 +55,7 @@ struct ContentView: View {
                                 .currency(
                                     code: Locale.current.currency?.identifier
                                     ?? "USD")
-                    )
+                    ).foregroundColor(tipPercentage == 0 ? .red : .primary)
                 }
             }.navigationTitle("WeSplit").toolbar{
                 if isAmountFocused {
